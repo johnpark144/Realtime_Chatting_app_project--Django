@@ -88,7 +88,8 @@
 </body>
 
 <script>
-    function autoRefresh_div() {    /* Refresh the div with id'chatting' every second */
+    /* Refresh the div with id'chatting' every second */
+    function autoRefresh_div() { 
         var currentLocation = window.location;
         $("#chatting").load(currentLocation + ' #chatting');
     }
