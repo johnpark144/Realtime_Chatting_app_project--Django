@@ -5,7 +5,7 @@
 - Sub Tools : Html, Css, JS, Bootstrap
 - Explantion :
 This is the Realtime chatting app.
-You can use only when you sign up and then you can chat with other people
+You can use only when you sign up and then chat with other people
 
 - Date of creation : Aug 25th ~ Aug 27th 2022
 
