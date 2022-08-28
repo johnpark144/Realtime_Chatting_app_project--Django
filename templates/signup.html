@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% block content %}
+
+<br>
+<div class="container-xxl d-flex align-items flex-column bd-highlight mb-3"
+    style="padding: 100px 0; align-items: center; ">
+    <h1 style="margin-bottom: 2rem;"> Resister</h1>
+    <form method="post" action="{% url 'chatting_app:signup' %}">
+        {% csrf_token %}
+        {% include "form_errors.html" %}
+
+        <div class="mb-3">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" id="username" style="font-size: 14px; width: 100%; height: 37px"
+                value="{{ form.username.value|default_if_none:'' }}">
+        </div>
+        <div class="mb-3">
+            <label for="password1">Password</label>
+            <input type="password" class="form-control" name="password1" id="password1"
+                value="{{ form.password1.value|default_if_none:'' }}">
+        </div>
+        <div class="mb-3">
+            <label for="password2">Password confirm</label>
+            <input type="password" class="form-control" name="password2" id="password2"
+                value="{{ form.password2.value|default_if_none:'' }}">
+        </div>
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" name="email" id="email"
+                value="{{ form.email.value|default_if_none:'' }}">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Create</button>
+
+    </form>
+    <br>
+    <p> You have an account? <a href="{% url 'chatting_app:login' %}">login</a></p>
+
+</div>
+
+{% endblock %}
