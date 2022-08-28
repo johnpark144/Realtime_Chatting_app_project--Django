@@ -14,8 +14,7 @@ Chatting :
  </video>
 
 Signup :
-<video src="https://user-images.githubusercontent.com/106279616/187085229-0bef6adf-e966-405b-a49e-e0f682fdab10.mp4" data-canonical-src="https://user-images.githubusercontent.com/106279616/187085229-0bef6adf-e966-405b-a49e-e0f682fdab10.mp4">
- </video>
+
 
 Size_adjust  :
 <video src="https://user-images.githubusercontent.com/106279616/187085238-47e15162-b2ea-476c-a25c-b39589d497d1.mp4" data-canonical-src="https://user-images.githubusercontent.com/106279616/187085238-47e15162-b2ea-476c-a25c-b39589d497d1.mp4"> </video>
