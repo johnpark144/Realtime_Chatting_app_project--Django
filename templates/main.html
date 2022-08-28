@@ -13,12 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <!-- Static -->
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <!-- Material Icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- ajax -->
+    <!-- Ajax -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
 
 
@@ -84,14 +81,14 @@
 </head>
 
 <body style="background-color: #69bd9e;">
-    <!-- 기본 템플릿 안에 삽입될 내용 Start -->
+    <!-- Contents Start -->
     {% block content %}
     {% endblock %}
-    <!-- 기본 템플릿 안에 삽입될 내용 End -->
+    <!-- Contents End -->
 </body>
 
 <script>
-    function autoRefresh_div() {    /* 1초마다 ID있는 div만 새로고침 */
+    function autoRefresh_div() {    /* Refresh the div with id'chatting' every second */
         var currentLocation = window.location;
         $("#chatting").load(currentLocation + ' #chatting');
     }
