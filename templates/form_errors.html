@@ -1,8 +1,9 @@
-<!-- 필드 오류와 넌필드 오류를 출력한다. -->
+<!-- To output field error and non-field error -->
 {% if form.errors %}
 <div class="alert alert-danger">
     {% for field in form %}
-    <!-- 필드 오류 -->
+    
+    <!-- field error -->
     {% if field.errors %} 
     <div>
         <strong>{{ field.label }}</strong>  
@@ -10,7 +11,8 @@
     </div>
     {% endif %}
     {% endfor %}
-    <!-- 넌필드 오류 -->
+    
+    <!-- non-field error -->
     {% for error in form.non_field_errors %}
     <div>
         <strong>{{ error }}</strong>
