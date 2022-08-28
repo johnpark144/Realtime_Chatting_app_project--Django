@@ -1,4 +1,4 @@
-{% extends 'main.html' %}   <!--  메인 템플릿과 연결 -->
+{% extends 'main.html' %}   <!--  connect to main.html -->
 {% block content %}
 
 <br>
@@ -6,41 +6,41 @@
     <div class="d-flex justify-content-between p-2 bd-highlight"
         style="margin-bottom: 30px; height: 30px; position: relative; top: 8px;">
         <a href="{% url 'chatting_app:logout' %}" class="material-icons"
-            style="color:gray; text-decoration-line : none">arrow_back_ios</a> <!-- 머티리얼 아이콘, 로그아웃 -->
+            style="color:gray; text-decoration-line : none">arrow_back_ios</a> <!-- Material Icon, logout -->
         <div>
             <h4>Chatting room</h4>
         </div>
         <div></div>
     </div>
 
-    <div id="chatting" class="overflow-auto">   <!-- div 실시간 새로고침을위해 id지정  -->
+    <div id="chatting" class="overflow-auto">   <!-- Div-id is for realtime-refresh  -->
         <br>
 
         {% if messages %}
         {% for message in messages %}
 
-        {% if message.username == user.username %}  <!-- 자신의 말풍선 -->
-        {% if forloop.last %}<div id="last_msg"></div>{% endif %}   <!--최신 메시지에만 id를 줘서 앵커역할-->
+        {% if message.username == user.username %}  <!-- Current user's speech bubble -->
+        {% if forloop.last %}<div id="last_msg"></div>{% endif %}   <!-- Only recent message has an id for anchor -->
         <div class="container d-flex bd-highlight mb-3 p-2 bd-highlight"
             style="background-color: #d2e0d8; border-top-left-radius: 2em; border-top-right-radius: 2em; border-bottom-left-radius: 2em;">
             <div id="username" class="p-2 bd-highlight">{{ message.username }}</div>
             
-            {% if message.content == "Deleted message" %}   <!--메시지가 삭제된경우 -->
+            {% if message.content == "Deleted message" %}   <!-- When message deleted -->
             <div id="deleted_content" class="p-2 bd-highlight">{{ message.content }} </div>
-            <div id="create_date" class="ms-auto p-2 bd-highlight">{{ message.create_date | date:"Nd"}} <br>
-                {{message.create_date | date:"h:ia"}}</div> <!--특정 년월일시분 만 출력효과-->
+            <div id="create_date" class="ms-auto p-2 bd-highlight">{{ message.create_date | date:"Nd"}} <br><!-- Month, day-->
+                {{message.create_date | date:"h:ia"}}</div> <!-- hour, minute, am_or_pm -->
             
-                {% else %}  <!-- 일반 메시지인 경우 (삭제된게 아닌경우) -->
+                {% else %}  <!-- Regular messages (not deleted messages) -->
             <div id="content" class="p-2 bd-highlight">{{ message.content }} </div>
             <div id="create_date" class="ms-auto p-2 bd-highlight">{{ message.create_date | date:"Nd"}} <br>
                 {{message.create_date | date:"h:ia"}}
                 <br><a href="{% url 'chatting_app:message_delete' message.id %}"
-                    style="color: #d47979; text-decoration-line: none;" class="delete material-icons delete">clear</a>  <!-- 메시지 삭제기능 -->
+                    style="color: #d47979; text-decoration-line: none;" class="delete material-icons delete">clear</a>
             </div>
             {% endif %}
         </div>
 
-        {% else %}  <!-- 상대방 말풍선 -->
+        {% else %}  <!-- Other user's speech bubble -->
         {% if forloop.last %}<div id="last_msg"></div>{% endif %}
         <div class="container d-flex bd-highlight mb-3 p-2 bd-highlight"
             style="background-color: #87e0ac; border-top-left-radius: 2em; border-top-right-radius: 2em; border-bottom-right-radius: 2em;">
@@ -60,15 +60,15 @@
             {% endif %}
         </div>
 
-        <!-- 메시지 텍스트  -->
-        <form id="form-id" action="{% url 'chatting_app:send'%}" method="post"
+        <!-- Message Text  -->
+        <form id="form-id" action="{% url 'chatting_app:send'%}" method="POST"
             class="input-group flex-nowrap mt-auto p-2 bd-highlight">
             {% csrf_token %}
             <input type="text" name="text" class="text form-control" placeholder="Type a message..." aria-label="Username"
                 aria-describedby="addon-wrapping">
             <a href="#" onclick="document.forms['form-id'].submit();"   
                 style=" font-size: 2rem; text-decoration-line: none; position: relative; top: 8px;"
-                class="material-icons">send</a><!-- href를 post로  -->
+                class="material-icons">send</a><!-- href as 'post'  -->
         </form>
     </div>
 </div>
