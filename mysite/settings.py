@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Etc/GMT+5'
+TIME_ZONE = 'Etc/GMT+5' # Houston Time zone
 
 USE_I18N = True
 
@@ -124,7 +124,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# 로그인 성공후 이동하는 URL
+# after login
 LOGIN_REDIRECT_URL = '/'
-# 로그아웃시 이동하는 URL
+# after logout
 LOGOUT_REDIRECT_URL = '/'
