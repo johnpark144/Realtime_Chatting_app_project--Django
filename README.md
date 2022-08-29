@@ -6,7 +6,8 @@
 - Explantion :
 This is the Realtime chatting app.
 You can use only when you sign up and then chat with other people
-- Date of creation : Aug 25th ~ Aug 28th 2022
+- Date of creation : Aug 25th ~ Aug 27th 2022
+- Date of debugging : Aug 28th 2022
 
 # Sample Video
 Chatting :
