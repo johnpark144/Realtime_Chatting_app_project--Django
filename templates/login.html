@@ -3,13 +3,14 @@
 
 <br>
 <div class="container-xxl d-flex align-items flex-column bd-highlight mb-3"
-    style="padding: 100px 0; align-items: center; text-align: center; ">
+    style="padding: 100px 100px; align-items: center; text-align: center; ">
     <h1 style="margin-bottom: 5rem;"> John's Chatting app</h1>
     <form method="post" action="{% url 'chatting_app:login' %}">
         {% csrf_token %}
         {% include "form_errors.html" %}
+
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" name="username" id="usernam" style="width: 500px;"
+            <input type="text" class="form-control" name="username" id="username"
                 value="{{ form.username.value|default_if_none:'' }}">
             <label for="floatingInput">Username</label>
         </div>
