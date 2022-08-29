@@ -10,7 +10,7 @@ You can use only when you sign up and then chat with other people
 - Date of debugging : Aug 28th 2022
 
 # Sample Video
-Chatting :
+Chatting and deleting:
 <video src="https://user-images.githubusercontent.com/106279616/187085197-eef9ed51-1528-42b2-aa20-e3522beda645.mp4" data-canonical-src="https://user-images.githubusercontent.com/106279616/187085197-eef9ed51-1528-42b2-aa20-e3522beda645.mp4"></video>
 
 Signup :
