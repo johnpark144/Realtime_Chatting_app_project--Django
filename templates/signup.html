@@ -2,9 +2,8 @@
 {% block content %}
 
 <br>
-<div class="container-xxl d-flex align-items flex-column bd-highlight mb-3"
-    style="padding: 100px 0; align-items: center; ">
-    <h1 style="margin-bottom: 2rem;"> Resister</h1>
+<div class="container-xxl d-flex align-items flex-column bd-highlight mb-3 overflow-auto" style="padding: 75px 60px;">
+    <h1 style="margin-bottom: 2rem; text-align: center;"> Resister</h1>
     <form method="post" action="{% url 'chatting_app:signup' %}">
         {% csrf_token %}
         {% include "form_errors.html" %}
@@ -29,11 +28,11 @@
             <input type="text" class="form-control" name="email" id="email"
                 value="{{ form.email.value|default_if_none:'' }}">
         </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Create</button>
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px; width: 100%;">Create</button>
 
     </form>
     <br>
-    <p> You have an account? <a href="{% url 'chatting_app:login' %}">login</a></p>
+    <p style="text-align: center;"> You have an account? <a href="{% url 'chatting_app:login' %}">login</a></p>
 
 </div>
 
