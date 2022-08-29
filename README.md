@@ -1,4 +1,4 @@
-# Chatting_app--Django
+# Realtime_Chatting_app--Django
 
 - Creater : Yeonghwan Park (John Park)
 - Main Tools : Python(Django)
