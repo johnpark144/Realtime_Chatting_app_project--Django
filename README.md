@@ -2,7 +2,7 @@
 
 - Creater : Yeonghwan Park (John Park)
 - Main Tools : Python(Django)
-- Sub Tools : Html(Css, JS, Bootstrap)
+- Sub Tools : Html, Css(Bootstrap), JS(Jquery)
 - Explantion :
 This is the Realtime chatting app.
 You can use only when you sign up and then chat with other people
