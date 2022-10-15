@@ -90,7 +90,7 @@
 <script>
     /* Refresh the div with id'chatting' every second */
     function autoRefresh_div() { 
-        var currentLocation = window.location;
+        const currentLocation = window.location;
         $("#chatting").load(currentLocation + ' #chatting');
     }
     setInterval('autoRefresh_div()', 1000);
